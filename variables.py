@@ -8,7 +8,7 @@ favorite_food = "Pasta"
 print(name)
 
 #How to print the type of a variable
-#print(type(name))
+print(type(name))
 
 #How to print a string, with a varible attached to it
-#print("Hello, my name is:", name)
+print("Hello, my name is:", name)
