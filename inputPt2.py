@@ -11,6 +11,11 @@ if(username == "Mr. B"):
     favorite_number = int(input()) #Don't forget to make it a number! (Using int())
     #Making sure to convert the number back in order to print!
     print("Well, your new favorite should be " + str(favorite_number*2)+ ", it's twice as good!")
+
+elif(username == "Nolan"):
+    print("Welcome, Nolan!")
+
+
 #The else is outside of the if because it's back on the first line
 else:
     #Everything on this tab line is part of the else
