@@ -18,7 +18,8 @@ elif(banan == "y" && yog == "y"): #This is another "and" condition, this says if
     print("You should have a parfait!")
 elif(choc == "y" && icec == "y"): #Another example of an "and"
     print("You really need to try double fudge ice cream!")
-elif(icec == "y" || yog == "y"): #This is an "or" condition - this says else if ice cream is y or yog is y
+
+elif(icec == "y" || yog == "y" && choc == "n"): #This is an "or" condition - this says else if ice cream is y or yog is y
     print("You must love vanilla!")
 else:
     print("You must love some nasty combos!")

@@ -37,7 +37,7 @@ if(inp1 == "y"):
             print("Speak some sense, man!")
     else:
         print("You need to want something we know about!")
-elif(inpt1 == "n"):
+elif(inp1 == "n"):
     print("It's going to bring you to your knees")
     print("Can you get up? (y/n)")
     getup = input() #get the input
