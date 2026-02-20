@@ -23,7 +23,8 @@ num1 = 0
 #This works, but is kind of clunky and only works for exactly a list of size 5
 while(booleanvar):
     print(list1[num1])
-    if(num1 == 4):
+    #Len list -1 because there are 5 items but we count from position 0!
+    if(num1 == len(list1)-1):
         booleanvar = False
     else:
         num1 = num1 + 1
