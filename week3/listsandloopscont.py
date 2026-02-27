@@ -7,6 +7,8 @@ print("BOOOOOM!")
 
 #Use the "in" list to check for a range of answers
 nameslist = ["Blake", "Tristan", "Nolan", "Evan", "George", "Muhammed", "Fernando", "Axel", "Malem"]
+#Adding my name to the list as well
+nameslist.append("Mr. B")
 print("What is your name?")
 name = input()
 if (name in nameslist):
