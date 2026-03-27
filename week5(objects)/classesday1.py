@@ -7,16 +7,18 @@ num = aNumber()
 #What happens if we just print the object?
 print(num)
 #We're printing now what the object holds in x
-#print(num.x)
+print(num.x)
 
 #What do we get if we create another instance?
 num2 = aNumber()
-#print(num2.x)
+print(num2.x)
 
 if(num == num2):
-    #print("They're the same!")
+    print()
+    print("They're the same!")
 else:
-    #print("They're different?")
+    print()
+    print("They're different?")
 
 #Create a person class (example used from w3schools)
 class Person:
@@ -27,6 +29,13 @@ class Person:
 p1 = Person("Emil", 36)
 
 #what do we think will be the result? How can we create another person?
-#Will our new person be the same as the other, even if they have the same values? 
-#print(p1.name)
-#print(p1.age)
+#Will our new person be the same as the other, even if they have the same values?
+print(p1.name)
+print(p1.age)
+
+p2 = Person("Fernando", 18)
+print(p2.name)
+print(p2.age)
+
+p3 = Person()
+print(p3.name)
