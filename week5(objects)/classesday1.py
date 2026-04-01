@@ -26,7 +26,7 @@ class Person:
     self.name = name
     self.age = age
 
-p1 = Person("Emil", 36)
+p1 = Person("Mr. B", 23)
 
 #what do we think will be the result? How can we create another person?
 #Will our new person be the same as the other, even if they have the same values?
