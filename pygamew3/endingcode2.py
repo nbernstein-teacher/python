@@ -23,52 +23,47 @@ platforms = [
 clock = pygame.time.Clock()
 
 running = True
-on_ground = False
-x = 10
+on_ground = False #ADD CONSTANT
+x = 0
 y = 240
 vy = 0
 gravity = 0.3
 
 while running:
+
     #Single key presses
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             running = False
 
-        if event.type == pygame.KEYDOWN:
-            if event.key == pygame.K_SPACE:
-                y = y-10
 
 
-
-    #Continuous movement press/press and hold
+    #Continuous movement press/press and hold - DEAL WITH HORIZONTAL FIRST
     keys = pygame.key.get_pressed()
     if keys[pygame.K_LEFT]:
         x = x-1
     if keys[pygame.K_RIGHT]:
         x = x+1
 
-    #X collisions
     mario_rect = mario.get_rect(topleft=(x,y))
 
     for platform in platforms:
         if mario_rect.colliderect(platform):
-            if x < platform.left:
+            if keys[pygame.K_RIGHT]:
                 x = platform.left - mario_rect.width
-            if x > platform.right:
+            if keys[pygame.K_LEFT]:
                 x = platform.right
 
-    if keys[pygame.K_UP] and (on_ground == True):
-        vy = -8
-    if keys[pygame.K_DOWN]:
-        y = y+1
-
-    on_ground = False
+    #NOW WE DEAL WITH VERTICAL
+    if keys[pygame.K_UP] and on_ground:
+        vy = -10
 
     vy = gravity + vy
     y = vy + y
 
-    #Y collisions
+    #RESET ON GROUND BEFORE CHECKING FOR collisions 67
+    on_ground = False
+
     mario_rect = mario.get_rect(topleft=(x,y))
 
     for platform in platforms:
@@ -77,13 +72,9 @@ while running:
                 y = platform.top - mario_rect.height
                 vy = 0
                 on_ground = True
-            if vy < 0:
+            elif vy < 0:
                 y = platform.bottom
                 vy = 0
-
-    screen.fill((0,0,0))
-
-
 
 
     screen.blit(backg, (0,0))
